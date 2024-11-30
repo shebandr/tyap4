@@ -187,6 +187,11 @@ namespace tyap4
 									TranslatedString += rule[5];
 								}
 								Chain = Chain.Remove(0, 1);
+								if(Stack.Length!=0 && Chain.Length == 0 && CurrentStage != FinalStage)
+								{
+									Chain = "Z";
+									i = i - 1;
+								}
 								break;
 							}
 							else
@@ -223,6 +228,11 @@ namespace tyap4
 										TranslatedString += rule[5];
 									}
 									Chain = Chain.Remove(0, 1);
+									if (Stack.Length != 0 && Chain.Length == 0 && CurrentStage != FinalStage)
+									{
+										Chain = "Z";
+										i = i - 1;
+									}
 									break;
 								}
 
